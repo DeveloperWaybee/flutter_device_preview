@@ -246,9 +246,6 @@ class PreviewWindow implements ui.SingletonFlutterWindow {
       parent.updateSemantics(update);
 
   @override
-  ui.ViewConfiguration get viewConfiguration => parent.viewConfiguration;
-
-  @override
   ui.WindowPadding get viewInsets => parent.viewInsets;
 
   ui.WindowPadding? _previewViewPadding;
@@ -278,6 +275,16 @@ class PreviewWindow implements ui.SingletonFlutterWindow {
 
   @override
   String? get systemFontFamily => parent.systemFontFamily;
+  
+  @override
+  ui.GestureSettings get gestureSettings => parent.gestureSettings;
+
+  @override
+  bool get nativeSpellCheckServiceDefined =>
+      parent.nativeSpellCheckServiceDefined;
+
+  @override
+  Object get viewId => throw parent.viewId;
 }
 
 class PreviewWindowPadding implements ui.WindowPadding {
